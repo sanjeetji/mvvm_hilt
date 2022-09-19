@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">simpleTrancsaction</string>
+    <string name="home">Home</string>
+    <string name="shopping">Shopping</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="user_dashboard">User Dashboard</string>
+    <string name="user_login">User Login</string>
+    <string name="enter_username">enter username</string>
+    <string name="enter_pass">enter password</string>
+    <string name="login">Login</string>
+    <string name="transactions">Transactions</string>
+</resources>

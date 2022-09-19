@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="transactions"
+            type="com.sanjeet.simpletrancsaction.domain.model.TransactionDetails" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_accountNameView"
+            android:layout_width="100dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:text="Title : "
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_accountName"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="@{transactions.title}"
+            app:layout_constraintStart_toEndOf="@+id/tv_accountNameView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_accountBalanceView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Balance : "
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_accountNameView"/>
+        <TextView
+            android:id="@+id/tv_accountBalance"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(transactions.balance)}"
+            app:layout_constraintStart_toEndOf="@+id/tv_accountBalanceView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_accountBalanceView"
+            app:layout_constraintTop_toTopOf="@+id/tv_accountBalanceView"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_accountBalance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
